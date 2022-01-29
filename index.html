@@ -18,7 +18,8 @@
     </div>
     <div class="page nodala" id="game">
         <div class="atbilde">
-            <p class="pareizi blakus">PAREIZI</p> <!--Parāda vārdus "PAREIZI" vai "NEPAREIZI", ņemot vērā nopsiesto burtu-->
+            <p class="pareizi blakus">PAREIZI</p> <!--Parāda vārdus "PAREIZI" vai "NEPAREIZI", ņemot vērā nopsiesto burtu-->\
+            <input class="next" type="button" value="➜" id="next" onClick="createWord()">
             <input type="text" class="tukss blakus" id="tukss"><!--Parāda, kuru burtu spēlētājs nospiedis-->
         </div>
         <div class="spele">
@@ -29,39 +30,40 @@
                 <input class="alfabets" type="button" value="A" id="A" onClick="reply_click()">
                 <input class="alfabets" type="button" value="Ā" id="Ā" onClick="reply_click()">
                 <input class="alfabets" type="button" value="B" id="B" onClick="reply_click()">
-                <input class="alfabets" type="button" value="C" id="C" >
-                <input class="alfabets" type="button" value="C" id="C" >
-                <input class="alfabets" type="button" value="C" id="C" >
-                <input class="alfabets" type="button" value="C" id="C" >
-                <input class="alfabets" type="button" value="Č" id="Č">
-                <input class="alfabets" type="button" value="D" id="D">
-                <input class="alfabets" type="button" value="E" id="E">
-                <input class="alfabets" type="button" value="Ē" id="Ē">
-                <input class="alfabets" type="button" value="F" id="F">
-                <input class="alfabets" type="button" value="G" id="G">
-                <input class="alfabets" type="button" value="Ģ" id="Ģ">
-                <input class="alfabets" type="button" value="H" id="H">
-                <input class="alfabets" type="button" value="I" id="I">
-                <input class="alfabets" type="button" value="Ī" id="Ī">
-                <input class="alfabets" type="button" value="J" id="J">
-                <input class="alfabets" type="button" value="K" id="K">
-                <input class="alfabets" type="button" value="Ķ" id="Ķ">
-                <input class="alfabets" type="button" value="L" id="L">
-                <input class="alfabets" type="button" value="Ļ" id="Ļ">
-                <input class="alfabets" type="button" value="M" id="M">
-                <input class="alfabets" type="button" value="N" id="N">
-                <input class="alfabets" type="button" value="Ņ" id="Ņ">
-                <input class="alfabets" type="button" value="O" id="O">
-                <input class="alfabets" type="button" value="P" id="P">
-                <input class="alfabets" type="button" value="R" id="R">
-                <input class="alfabets" type="button" value="S" id="S">
-                <input class="alfabets" type="button" value="Š" id="Š">
-                <input class="alfabets" type="button" value="T" id="T">
-                <input class="alfabets" type="button" value="U" id="U">
-                <input class="alfabets" type="button" value="Ū" id="Ū">
-                <input class="alfabets" type="button" value="V" id="V">
-                <input class="alfabets" type="button" value="Z" id="Z">
-                <input class="alfabets" type="button" value="Ž" id="Ž">
+                <input class="alfabets" type="button" value="C" id="C" onClick="reply_click()">
+                <input class="alfabets" type="button" value="C" id="C" onClick="reply_click()">
+                <input class="alfabets" type="button" value="C" id="C" onClick="reply_click()">
+                <input class="alfabets" type="button" value="C" id="C" onClick="reply_click()">
+                <input class="alfabets" type="button" value="Č" id="Č" onClick="reply_click()">
+                <input class="alfabets" type="button" value="D" id="D" onClick="reply_click()">
+                <input class="alfabets" type="button" value="E" id="E" onClick="reply_click()">
+                <input class="alfabets" type="button" value="Ē" id="Ē" onClick="reply_click()">
+                <input class="alfabets" type="button" value="F" id="F" onClick="reply_click()">
+                <input class="alfabets" type="button" value="G" id="G" onClick="reply_click()">
+                <input class="alfabets" type="button" value="Ģ" id="Ģ" onClick="reply_click()">
+                <input class="alfabets" type="button" value="H" id="H" onClick="reply_click()">
+                <input class="alfabets" type="button" value="I" id="I" onClick="reply_click()">
+                <input class="alfabets" type="button" value="Ī" id="Ī" onClick="reply_click()">
+                <input class="alfabets" type="button" value="J" id="J" onClick="reply_click()">
+                <input class="alfabets" type="button" value="J" id="J" onClick="reply_click()">
+                <input class="alfabets" type="button" value="K" id="K" onClick="reply_click()">
+                <input class="alfabets" type="button" value="Ķ" id="Ķ" onClick="reply_click()">
+                <input class="alfabets" type="button" value="L" id="L" onClick="reply_click()">
+                <input class="alfabets" type="button" value="Ļ" id="Ļ" onClick="reply_click()">
+                <input class="alfabets" type="button" value="M" id="M" onClick="reply_click()">
+                <input class="alfabets" type="button" value="N" id="N" onClick="reply_click()">
+                <input class="alfabets" type="button" value="Ņ" id="Ņ" onClick="reply_click()">
+                <input class="alfabets" type="button" value="O" id="O" onClick="reply_click()">
+                <input class="alfabets" type="button" value="P" id="P" onClick="reply_click()">
+                <input class="alfabets" type="button" value="R" id="R" onClick="reply_click()">
+                <input class="alfabets" type="button" value="S" id="S" onClick="reply_click()">
+                <input class="alfabets" type="button" value="Š" id="Š" onClick="reply_click()">
+                <input class="alfabets" type="button" value="T" id="T" onClick="reply_click()">
+                <input class="alfabets" type="button" value="U" id="U" onClick="reply_click()">
+                <input class="alfabets" type="button" value="Ū" id="Ū" onClick="reply_click()">
+                <input class="alfabets" type="button" value="V" id="V" onClick="reply_click()">
+                <input class="alfabets" type="button" value="Z" id="Z" onClick="reply_click()">
+                <input class="alfabets" type="button" value="Ž" id="Ž" onClick="reply_click()">
             </div>
 
         </div>
@@ -93,16 +95,17 @@
         //Ja spēlētāja nospiestais burts sākas ar bildes nosaukuma pirmo burtu, parādās atbilde "PAREIZI" div kastītē class='pareizi'.
         //vārdu masīvs
 
-        function reply_click()
-            {
-            alert(event.srcElement.id);
-            }       
+             
 
         const btn=document.querySelector('.hello');//btn - poga, lai sāktu spēli
         const bilde=document.querySelector('#bilde');//bildes vieta html
+        const guess=document.querySelector('.tukss');//logs, kurā parādās nospiestās alfabēta pogas id
+        const atbilde=document.querySelector('.pareizi');//pareizi/nepareizi teksta logs
+        const nakamais=document.querySelector('.next');//nākamais attēls poga
         let game=false;
         let newImage="";//nejauši izvēlētā masīva vārda atbilstošais attēls
         let newV="";
+        let poga="";
 
         const words=[
                     {title: "ASTOŅKĀJIS", img: "atteli/A.png"},
@@ -143,12 +146,30 @@
         const createWord=()=>{
             number=Math.floor(Math.random()*words.length);//mainīgajam number piešķir nejauši izvēlētu mazā masīva indeksu
             let random=words[number].title;//izveidots lokālais mainīgais random, kuram pieškirta mazā masīva title vērtība
+            let letter = random.charAt(0);
             newImage=words[number].img;//globālam mainīgajam pieškirta mazā masīva img vērtība
             console.log(random);
             console.log(newImage);
-            return random;
+            console.log(letter);
+            return letter;
         }
 
+        function reply_click()
+            {
+            console.log(event.srcElement.id);
+            poga=event.srcElement.id;
+            console.log(poga+"*");
+            document.getElementById("tukss").value=poga;
+            if (poga==newV){ //ja lietotāja ievadītais vārds vienāds ar nejauši izvēlēto vārdu
+                    console.log('correct');
+                    game=false;
+                    atbilde.innerHTML='PAREIZI';//html <p class="pareizi"> izvada tekstu, ka pareizi
+                    guess.style.display="none";
+            }  
+            else{
+                atbilde.innerHTML='NEPAREIZI. MĒĢINI VĒL!';//html <p class="pareizi"> izvada tekstu, ka nepareizi
+            }
+        }
         //kas notiek, kad nospiesta poga "Sākt"
         btn.addEventListener('click', function(){
             if (!game){
@@ -157,7 +178,11 @@
                 document.getElementById("tukss").value="";//iztukšo input loga saturu
                 newV=createWord();//mainīgajam newV tiek pēc nejaušības principa izvēlēts vārds
                 bilde.innerHTML='<img class="att" src="' +newImage+ '">';//blokā <div class="bilde"> ievieto randoma attēlu
+               
+
+
             }
+        
         })
         
 
