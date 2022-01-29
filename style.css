@@ -1,3 +1,81 @@
+/*Palete:https://coolors.co/palette/15142c-2b2350-614173-de5277-ff863b*/
+/*color: #15142C;*/
+/*color: #2B2350;*/
+/*color: #614173;*/
+/*color: #DE5277;*/
+/*color: #FF863B;*/
 body{
-    background-color: #98fc03;
+    background-color: black;
+    background-image: url(1.gif);
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.page{
+    background-color: #2B2350;
+    width: 90%;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: 8px 4px 10px #000;
+}
+.Header{
+    background-color:#614173;
+    width: 80%; 
+    height: 90px;
+    margin: 20px auto;
+    padding: 2px;
+    border-radius: 50px;
+    box-shadow: 8px 4px 10px #000;
+}
+.header-title{
+    color: whitesmoke;
+    text-shadow: #000 2px 2px;
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 15px;
+}
+.atbilde{
+    display: flex;
+}
+.spele{
+    display: flex;
+    width:90%;
+}
+.blakus{
+    flex:1;
+}
+.box-bilde{
+    background-color:#614173;
+    width: 40%; 
+    height: 400px;
+    margin: 20px;
+    padding: 2px;
+    border-radius: 30%;
+    box-shadow: 8px 4px 10px #000;
+    
+   
+}
+.box-burti{
+    width: 60%; 
+    height: 400px;
+    margin: 20px;
+    border: 2px solid #614173;
+    border-radius: 12px;
+    padding: 5px;
+    box-shadow: 8px 4px 10px #000;
+    
+    
+}
+.alfabets{
+    width: 70px; 
+    height: 80px;
+    padding: 2px;
+    margin:2px;
+    background-color: #FF863B;
+    text-align: center;
+    color: #fff;
+    text-shadow: -1px -1px 2px #000;
+    border-radius: 10px;
+    font: bold 60px arial, sans-serif;
+
 }
