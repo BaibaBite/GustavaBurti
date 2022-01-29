@@ -10,11 +10,32 @@ body{
     background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
 }
+/*paslēpj visus blokus*/
 .nodala{
     display: none;
 }
+/*lai ielādējot lapu būtu redzema sākuma kastīte*/
 #hello{
     display: block;
+    display:flex;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+}
+/*sākuma pogas izskats*/
+.hello{
+    width: 50%; 
+    height: 80px;
+    padding: 2px;
+    margin: 20px auto;
+    align-items: center;
+    background-color: #FF863B;
+    color: #fff;
+    text-shadow: -1px -1px 2px #000;
+    border-radius: 10px;
+    font: bold 60px arial, sans-serif;
+    box-shadow: 8px 4px 10px #000;
+
 }
 .page{
     background-color: #2B2350;
@@ -58,9 +79,18 @@ body{
     padding: 2px;
     border-radius: 30%;
     box-shadow: 8px 4px 10px #000;
-    
-   
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.att{
+    display: block;
+    width: 40%;
+    border-radius: 30px;
+    margin: 20px auto;
+}
+
 .box-burti{
     width: 60%; 
     height: 400px;

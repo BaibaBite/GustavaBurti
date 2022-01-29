@@ -14,7 +14,7 @@
         </div>
     </div>
     <div class="page nodala" id="hello">
-        <button class="nav-link" onclick="atvertSadalu('game')">SĀKT SPĒLI!</button>
+        <button class="hello" onclick="atvertSadalu('game')">SĀKT SPĒLI!</button>
     </div>
     <div class="page nodala" id="game">
         <div class="atbilde">
@@ -73,10 +73,7 @@
 
     </div>
     <script>
-        //Programma pēc nejaušības principa izvēles attēlu un parāda to id='bilde' kastītē.
-        //Spēlētājs nospiež burta pogu, ar kuru sākas attēlā redzamā objekta nosaukums.
-        //Ja spēlētāja nospiestais burts sākas ar bildes nosaukuma pirmo burtu, parādās atbilde "PAREIZI" div kastītē class='pareizi'.
-        //vārdu masīvs
+        
         
         //f-cija, kas pēc navigācijas pogas nospiešanas atver atbilstošo klasi un paslēpj pārējās
         function atvertSadalu(sadalasID) {
@@ -87,6 +84,17 @@
           }
           document.getElementById(sadalasID).style.display = "block";  //blokam ar attiecīgo id nosaukumu nomaina stilu uz redzams 
         }
+
+        //Programma pēc nejaušības principa izvēles attēlu un parāda to id='bilde' kastītē.
+        //Spēlētājs nospiež burta pogu, ar kuru sākas attēlā redzamā objekta nosaukums.
+        //Ja spēlētāja nospiestais burts sākas ar bildes nosaukuma pirmo burtu, parādās atbilde "PAREIZI" div kastītē class='pareizi'.
+        //vārdu masīvs
+
+        const btn=document.querySelector('.hello');//btn - poga, lai sāktu spēli
+        const bilde=document.querySelector('#bilde');//bildes vieta html
+        let game=false;
+        let newImage="";//nejauši izvēlētā masīva vārda atbilstošais attēls
+        let newV="";
 
         const words=[
                     {title: "ASTOŅKĀJIS", img: "atteli/A.png"},
@@ -123,6 +131,29 @@
                     {title: "ZĀBAKS", img: "atteli/z.png"},
                     {title: "ŽURKA", img: "atteli/ž.png"}
                 ];
+         //pēc nejaušības principa izvēlas no masīva attēlu
+        const createWord=()=>{
+            number=Math.floor(Math.random()*words.length);//mainīgajam number piešķir nejauši izvēlētu mazā masīva indeksu
+            let random=words[number].title;//izveidots lokālais mainīgais random, kuram pieškirta mazā masīva title vērtība
+            newImage=words[number].img;//globālam mainīgajam pieškirta mazā masīva img vērtība
+            console.log(random);
+            console.log(newImage);
+            return random;
+        }
+
+        //kas notiek, kad nospiesta poga "Sākt"
+        btn.addEventListener('click', function(){
+            if (!game){
+                game=true;
+                console.log("čau");
+                document.getElementById("tukss").value="";//iztukšo input loga saturu
+                newV=createWord();//mainīgajam newV tiek pēc nejaušības principa izvēlēts vārds
+                bilde.innerHTML='<img class="att" src="' +newImage+ '">';//blokā <div class="bilde"> ievieto randoma attēlu
+            }
+        })
+        
+
+        
     </script>
 </body>
 </html>
