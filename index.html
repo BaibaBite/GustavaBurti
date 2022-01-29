@@ -26,10 +26,13 @@
                 <div class="bilde" id="bilde"></div><!--tukša bildes kaste, aizpilda ar JavaScript-->
             </div>
             <div class="box-burti blakus">
-                <input class="alfabets" type="button" value="A" id="A">
-                <input class="alfabets" type="button" value="Ā" id="Ā">
-                <input class="alfabets" type="button" value="B" id="B">
-                <input class="alfabets" type="button" value="C" id="C">
+                <input class="alfabets" type="button" value="A" id="A" onClick="reply_click()">
+                <input class="alfabets" type="button" value="Ā" id="Ā" onClick="reply_click()">
+                <input class="alfabets" type="button" value="B" id="B" onClick="reply_click()">
+                <input class="alfabets" type="button" value="C" id="C" >
+                <input class="alfabets" type="button" value="C" id="C" >
+                <input class="alfabets" type="button" value="C" id="C" >
+                <input class="alfabets" type="button" value="C" id="C" >
                 <input class="alfabets" type="button" value="Č" id="Č">
                 <input class="alfabets" type="button" value="D" id="D">
                 <input class="alfabets" type="button" value="E" id="E">
@@ -89,6 +92,11 @@
         //Spēlētājs nospiež burta pogu, ar kuru sākas attēlā redzamā objekta nosaukums.
         //Ja spēlētāja nospiestais burts sākas ar bildes nosaukuma pirmo burtu, parādās atbilde "PAREIZI" div kastītē class='pareizi'.
         //vārdu masīvs
+
+        function reply_click()
+            {
+            alert(event.srcElement.id);
+            }       
 
         const btn=document.querySelector('.hello');//btn - poga, lai sāktu spēli
         const bilde=document.querySelector('#bilde');//bildes vieta html
