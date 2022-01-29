@@ -13,7 +13,10 @@
             <h1 class="header-title">GUSTAVA BURTI</h1>
         </div>
     </div>
-    <div class="page">
+    <div class="page nodala" id="hello">
+        <button class="nav-link" onclick="atvertSadalu('game')">SĀKT SPĒLI!</button>
+    </div>
+    <div class="page nodala" id="game">
         <div class="atbilde">
             <p class="pareizi blakus">PAREIZI</p> <!--Parāda vārdus "PAREIZI" vai "NEPAREIZI", ņemot vērā nopsiesto burtu-->
             <input type="text" class="tukss blakus" id="tukss"><!--Parāda, kuru burtu spēlētājs nospiedis-->
@@ -74,6 +77,17 @@
         //Spēlētājs nospiež burta pogu, ar kuru sākas attēlā redzamā objekta nosaukums.
         //Ja spēlētāja nospiestais burts sākas ar bildes nosaukuma pirmo burtu, parādās atbilde "PAREIZI" div kastītē class='pareizi'.
         //vārdu masīvs
+        
+        //f-cija, kas pēc navigācijas pogas nospiešanas atver atbilstošo klasi un paslēpj pārējās
+        function atvertSadalu(sadalasID) {
+          var i;
+          var x = document.getElementsByClassName("nodala");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  //visiem uzliek stilu neredzams
+          }
+          document.getElementById(sadalasID).style.display = "block";  //blokam ar attiecīgo id nosaukumu nomaina stilu uz redzams 
+        }
+
         const words=[
                     {title: "ASTOŅKĀJIS", img: "atteli/A.png"},
                     {title: "ĀBOLS", img: "atteli/ā.jpg"},
