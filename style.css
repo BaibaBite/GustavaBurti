@@ -64,6 +64,9 @@ body{
 .atbilde{
     display: flex;
 }
+#game{
+    display: block;
+}
 .spele{
     display: flex;
     width:90%;

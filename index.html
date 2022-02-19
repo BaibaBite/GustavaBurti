@@ -13,9 +13,9 @@
             <h1 class="header-title">GUSTAVA BURTI</h1>
         </div>
     </div>
-    <div class="page nodala" id="hello">
+    <!-- <div class="page nodala" id="hello">
         <button class="hello" onclick="atvertSadalu('game')">SĀKT SPĒLI!</button>
-    </div>
+    </div> -->
     <div class="page nodala" id="game">
         <div class="atbilde">
             <p class="pareizi blakus">PAREIZI</p> <!--Parāda vārdus "PAREIZI" vai "NEPAREIZI", ņemot vērā nopsiesto burtu-->\
@@ -81,14 +81,14 @@
         
         
         //f-cija, kas pēc navigācijas pogas nospiešanas atver atbilstošo klasi un paslēpj pārējās
-        function atvertSadalu(sadalasID) {
-          var i;
-          var x = document.getElementsByClassName("nodala");
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";  //visiem uzliek stilu neredzams
-          }
-          document.getElementById(sadalasID).style.display = "block";  //blokam ar attiecīgo id nosaukumu nomaina stilu uz redzams 
-        }
+        // function atvertSadalu(sadalasID) {
+        //   var i;
+        //   var x = document.getElementsByClassName("nodala");
+        //   for (i = 0; i < x.length; i++) {
+        //     x[i].style.display = "none";  //visiem uzliek stilu neredzams
+        //   }
+        //   document.getElementById(sadalasID).style.display = "block";  //blokam ar attiecīgo id nosaukumu nomaina stilu uz redzams 
+        // }
 
         //Programma pēc nejaušības principa izvēles attēlu un parāda to id='bilde' kastītē.
         //Spēlētājs nospiež burta pogu, ar kuru sākas attēlā redzamā objekta nosaukums.
@@ -171,7 +171,7 @@
             }
         }
         //kas notiek, kad nospiesta poga "Sākt"
-        btn.addEventListener('click', function(){
+        // btn.addEventListener('click', function(){
             if (!game){
                 game=true;
                 console.log("čau");
@@ -183,7 +183,7 @@
 
             }
         
-        })
+        // })
         
 
         
