@@ -71,12 +71,12 @@ body{
     display: flex;
     width:90%;
 }
-.blakus{
+/*.blakus{
     flex:1;
-}
+}*/
 .box-bilde{
     background-color:#614173;
-    width: 40%; 
+    width: 30%; 
     height: 400px;
     margin: 20px;
     padding: 2px;
@@ -95,7 +95,7 @@ body{
 }
 
 .box-burti{
-    width: 60%; 
+    width: 70%; 
     height: 400px;
     margin: 20px;
     border: 2px solid #614173;
