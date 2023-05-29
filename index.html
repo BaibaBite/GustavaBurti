@@ -45,7 +45,6 @@
                 <input class="alfabets" type="button" value="I" id="I" onClick="reply_click()">
                 <input class="alfabets" type="button" value="Ī" id="Ī" onClick="reply_click()">
                 <input class="alfabets" type="button" value="J" id="J" onClick="reply_click()">
-                <input class="alfabets" type="button" value="J" id="J" onClick="reply_click()">
                 <input class="alfabets" type="button" value="K" id="K" onClick="reply_click()">
                 <input class="alfabets" type="button" value="Ķ" id="Ķ" onClick="reply_click()">
                 <input class="alfabets" type="button" value="L" id="L" onClick="reply_click()">
@@ -160,16 +159,8 @@
             console.log(event.srcElement.id);
             poga=event.srcElement.id;
             console.log(poga+"*");
-            document.getElementById("nospiests").value=poga;
-            if (poga==newV){ //ja lietotāja ievadītais vārds vienāds ar nejauši izvēlēto vārdu
-                    console.log('correct');
-                    game=false;
-                    atbilde.innerHTML='PAREIZI';//html <p class="pareizi"> izvada tekstu, ka pareizi
-                    guess.style.display="none";
-            }  
-            else{
-                atbilde.innerHTML='NEPAREIZI. MĒĢINI VĒL!';//html <p class="pareizi"> izvada tekstu, ka nepareizi
-            }
+            guess.innerHTML=poga;
+           
         }
         //kas notiek, kad nospiesta poga "Sākt"
         // btn.addEventListener('click', function(){
@@ -182,6 +173,16 @@
                
 
 
+            }
+            else{
+                if (poga==newV){ //ja lietotāja ievadītais vārds vienāds ar nejauši izvēlēto vārdu
+                    console.log('correct');
+                    game=false;
+                    atbilde.innerHTML='PAREIZI';//html <p class="pareizi"> izvada tekstu, ka pareizi  
+                }  
+                else{
+                atbilde.innerHTML='NEPAREIZI. MĒĢINI VĒL!';//html <p class="pareizi"> izvada tekstu, ka nepareizi
+                }
             }
         
         // })
