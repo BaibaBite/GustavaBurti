@@ -13,21 +13,19 @@
             <h1 class="header-title">AMĒLIJAS BURTI</h1>
         </div>
     </div>
-    <!-- <div class="page nodala" id="hello">
+    <div class="page nodala" id="hello">
         <button class="hello" onclick="atvertSadalu('game')">SĀKT SPĒLI!</button>
-    </div> -->
+    </div> 
     <div class="page nodala" id="game">
         <div class="atbilde">
             <p class="pareizi blakus">KĀDS BURTS?</p> <!--Parāda vārdus "PAREIZI" vai "NEPAREIZI", ņemot vērā nopsiesto burtu-->
-            <p id="nospiests">...</p>
+            <p id="nospiests">...</p> <!--Parāda nospiesto burtu-->
             
-            
-            <!--<input class="next" type="button" value="➜" id="next" onClick="createWord()">
-            <input type="text" class="tukss blakus" id="tukss">Parāda, kuru burtu spēlētājs nospiedis-->
         </div>
         <div class="spele">
             <div class="box-bilde blakus">
                 <div class="bilde" id="bilde"></div><!--tukša bildes kaste, aizpilda ar JavaScript-->
+                <input class="next" type="button" value="JAUNS ATTĒLS➜" id="next" onClick="createWord()"><!--Jānospiež, lai parādītu nākamo attēlu-->
             </div>
             <div class="box-burti blakus">
                 <input class="alfabets" type="button" value="A" id="A" onClick="reply_click()">
@@ -80,14 +78,14 @@
         
         
         //f-cija, kas pēc navigācijas pogas nospiešanas atver atbilstošo klasi un paslēpj pārējās
-        // function atvertSadalu(sadalasID) {
-        //   var i;
-        //   var x = document.getElementsByClassName("nodala");
-        //   for (i = 0; i < x.length; i++) {
-        //     x[i].style.display = "none";  //visiem uzliek stilu neredzams
-        //   }
-        //   document.getElementById(sadalasID).style.display = "block";  //blokam ar attiecīgo id nosaukumu nomaina stilu uz redzams 
-        // }
+        function atvertSadalu(sadalasID) {
+            var i;
+            var x = document.getElementsByClassName("nodala");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  //visiem uzliek stilu neredzams
+            }
+            document.getElementById(sadalasID).style.display = "block";  //blokam ar attiecīgo id nosaukumu nomaina stilu uz redzams 
+        }
 
         //Programma pēc nejaušības principa izvēles attēlu un parāda to id='bilde' kastītē.
         //Spēlētājs nospiež burta pogu, ar kuru sākas attēlā redzamā objekta nosaukums.
@@ -98,9 +96,9 @@
 
         const btn=document.querySelector('.hello');//btn - poga, lai sāktu spēli
         const bilde=document.querySelector('#bilde');//bildes vieta html
-        const guess=document.querySelector('#nospiests');//logs, kurā parādās nospiestās alfabēta pogas id
+        const guess=document.querySelector('#nospiests');//vieta, kurā parādās nospiestās alfabēta pogas id
         const atbilde=document.querySelector('.pareizi');//pareizi/nepareizi teksta logs
-        //const nakamais=document.querySelector('.next');//nākamais attēls poga
+        const nakamais=document.querySelector('.next');//nākamais attēls poga
         let game=false;
         let newImage="";//nejauši izvēlētā masīva vārda atbilstošais attēls
         let newV="";
@@ -148,44 +146,42 @@
             let random=words[number].title;//izveidots lokālais mainīgais random, kuram pieškirta mazā masīva title vērtība
             let letter = random.charAt(0);
             newImage=words[number].img;//globālam mainīgajam pieškirta mazā masīva img vērtība
+            newV=letter;
             console.log(random);
             console.log(newImage);
             console.log(letter);
-            return letter;
+            console.log(newV)
+            guess.innerHTML="";//iztukšo input loga saturu
+            bilde.innerHTML='<img class="att" src="' +newImage+ '">';//blokā <div class="bilde"> ievieto randoma attēlu
+            nakamais.style.display="none";
+            atbilde.innerHTML="KĀDS BURTS?"
         }
+        
+       
 
-        function reply_click()
-            {
-            console.log(event.srcElement.id);
-            poga=event.srcElement.id;
+        function reply_click(){
+            poga=event.srcElement.id;//mainīgajā poga saglabā nospiestās pogas id
             console.log(poga+"*");
-            guess.innerHTML=poga;
-           
-        }
-        //kas notiek, kad nospiesta poga "Sākt"
-        // btn.addEventListener('click', function(){
-            if (!game){
-                game=true;
-                console.log("čau");
-                document.getElementById("nospiests").value="";//iztukšo input loga saturu
-                newV=createWord();//mainīgajam newV tiek pēc nejaušības principa izvēlēts vārds
-                bilde.innerHTML='<img class="att" src="' +newImage+ '">';//blokā <div class="bilde"> ievieto randoma attēlu
-               
 
-
-            }
-            else{
+                
                 if (poga==newV){ //ja lietotāja ievadītais vārds vienāds ar nejauši izvēlēto vārdu
                     console.log('correct');
                     game=false;
-                    atbilde.innerHTML='PAREIZI';//html <p class="pareizi"> izvada tekstu, ka pareizi  
+                    guess.innerHTML=poga;//pēc pogas nospiešana, html kodā tiek parādīts mainīgā poga saturs
+                    atbilde.style.color="#fff"
+                    atbilde.innerHTML='PAREIZI';//html <p class="pareizi"> izvada tekstu, ka pareizi
+                    nakamais.style.display="block";  
                 }  
                 else{
-                atbilde.innerHTML='NEPAREIZI. MĒĢINI VĒL!';//html <p class="pareizi"> izvada tekstu, ka nepareizi
-                }
-            }
-        
-        // })
+                    game=false;
+                    guess.innerHTML=poga;//pēc pogas nospiešana, html kodā tiek parādīts mainīgā poga saturs
+                    atbilde.style.color="red"
+                    atbilde.innerHTML='NEPAREIZI. MĒĢINI VĒL!';//html <p class="pareizi"> izvada tekstu, ka nepareizi
+                    nakamais.style.display="none";
+                }  
+        }
+
+
         
 
         

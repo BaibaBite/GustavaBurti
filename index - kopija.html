@@ -162,7 +162,7 @@
             document.getElementById("tukss").value=poga;
             if (poga==newV){ //ja lietotāja ievadītais vārds vienāds ar nejauši izvēlēto vārdu
                     console.log('correct');
-                    game=false;
+                    //game=false;
                     atbilde.innerHTML='PAREIZI';//html <p class="pareizi"> izvada tekstu, ka pareizi
                     guess.style.display="none";
             }  
@@ -172,16 +172,16 @@
         }
         //kas notiek, kad nospiesta poga "Sākt"
         // btn.addEventListener('click', function(){
-            if (!game){
-                game=true;
-                console.log("čau");
-                document.getElementById("tukss").value="";//iztukšo input loga saturu
-                newV=createWord();//mainīgajam newV tiek pēc nejaušības principa izvēlēts vārds
-                bilde.innerHTML='<img class="att" src="' +newImage+ '">';//blokā <div class="bilde"> ievieto randoma attēlu
+            //if (!game){
+                //game=true;
+                //console.log("čau");
+                //document.getElementById("tukss").value="";//iztukšo input loga saturu
+                //newV=createWord();//mainīgajam newV tiek pēc nejaušības principa izvēlēts vārds
+               // bilde.innerHTML='<img class="att" src="' +newImage+ '">';//blokā <div class="bilde"> ievieto randoma attēlu
                
 
 
-            }
+            //}
         
         // })
         

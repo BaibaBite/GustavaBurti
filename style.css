@@ -71,6 +71,31 @@ body{
     display: flex;
     width:90%;
 }
+#nospiests, .pareizi{
+    margin:10px auto;
+    width:40%;
+    font-size: 34pt;
+    background-color:#614173;
+    text-align: center;
+    color: #fff;
+    text-shadow: -1px -1px 2px #000;
+    border-radius: 10px;
+    font: bold 60px arial, sans-serif;
+    box-shadow: 8px 4px 10px #000;
+
+}
+#next{
+    width: 200px; 
+    height: 40px;
+    margin: 20px;
+    padding: 2px;
+    border-radius: 10px;
+    font: bold 20px arial, sans-serif;
+    box-shadow: 8px 4px 10px #000;
+    display:flex;
+    justify-content: center;
+    align-items: center; 
+}
 /*.blakus{
     flex:1;
 }*/
